@@ -1,10 +1,6 @@
-;;; mindre-theme.el --- Minimal, light theme -*- lexical-binding: t -*-
+;;; mindre-theme.el --- Minimal, dark theme -*- lexical-binding: t -*-
 
-;; Author: Erik Bäckman <contact@ebackman.net>
-;; Version: 0.1.5
-;; Package-Requires: ((emacs "26.1"))
-;; Keywords: faces
-;; Homepage: https://github.com/erikbackman/mindre-theme
+;; Forked from https://github.com/erikbackman/mindre-theme
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -22,18 +18,7 @@
 
 ;;; Commentary:
 
-;; Mindre (which is the Swedish word for “less”) tries to strike a good balance
-;; between usability and minimalism by almost being a monochrome theme but with
-;; a splash of color.
-;;
-;; Three colors are used to make certain language constructs stand out
-;; enough for your eyes to notice them without being distracting.
-;; The colors (in order of importance) are:
-;; 1. #5c3e99 (mindre-keyword)
-;;    Preferably used for language constructs that acts as the beginning
-;;    or end of a clause, such as if/then/else, when, where etc.
-;; 2. #16524F (mindre-type)
-;; 3. #54433a (mindre-verbatim)
+;; Dark version of Mindre
 
 
 ;;; Code:
@@ -47,29 +32,29 @@
 
 (eval-and-compile
   (defconst mindre-theme-colors-alist
-    '(;; Basic
-      (bg-main . "#F5F5F5")
-      (fg-main . "#2e3338")
-      (bg-active . "#f2f3f5")
-      (bg-inactive . "#e3e5e8")
-      (black . "#000000")
-      (black-alt . "#171A1C")
-      (gray . "#CFD8DC")
-      (gray-light . "#ECEFF1")
-      (gray-silver . "#B0BEC5")
-      (gray-dark . "#585c60")
-      (purple . "#5c3e99")
-      (blue . "#23457f")
-      (blue-alt . "#0071bc")
-      (blue-light . "#d9edf7")
-      (green . "#16524F")
-      (green-mint . "#ddffdd")
-      (green-light . "#3c763d")
-      (green-faint . "#537469")
-      (yellow-dark . "#54433a")
-      (red . "#9E0000")
-      (red-faint . "#ffb7b6")
-      (orange . "#d47500"))))
+	  (bg-main       . "#141214")
+	  (fg-main       . "#E8E3EA")
+	  (bg-active     . "#1C191E")
+	  (bg-inactive   . "#242026")
+	  (black         . "#000000")
+	  (black-alt     . "#0D0B0E")
+	  (gray          . "#625B65")
+	  (gray-light    . "#302B32")
+	  (gray-silver   . "#8E8792")
+	  (gray-dark     . "#4A444D")
+	  (purple        . "#B06FE5")
+	  (blue          . "#7C9FE8")
+	  (blue-alt      . "#6FA8DC")
+	  (blue-light    . "#292236")
+	  (green         . "#63B89E")
+	  (green-mint    . "#273A32")
+	  (green-light   . "#79C99F")
+	  (green-faint   . "#527F70")
+
+	  (yellow-dark   . "#A58A65")
+	  (red           . "#E06C75")
+	  (red-faint     . "#48272A")
+	  (orange        . "#D99A5B"))
 
 (defmacro mindre-with-color-variables (&rest body)
   (declare (indent 0))
