@@ -8,7 +8,7 @@ My version of Mindre with my private modificatons
 #+begin_src emacs-lisp
 (use-package mindre-theme
     :ensure t
-    :straight (:host github :repo "erikbackman/mindre-theme")
+    :straight (:host github :repo "kmtrebacz/mindre-theme")
     :custom
     (mindre-use-more-bold nil)
     (mindre-use-faded-lisp-parens t)
