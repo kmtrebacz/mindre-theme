@@ -1,41 +1,7 @@
-#+html: <img src="../assets/mindre-logo.png"/>
-
-#+html: <a href="https://www.gnu.org/software/emacs/"><img alt="GNU Emacs" src="https://github.com/erikbackman/erikbackman/blob/master/emacs.svg?raw=true"/></a>
-#+html: <a href="https://melpa.org/#/mindre-theme"><img alt="MELPA" src="https://melpa.org/packages/mindre-theme-badge.svg"/></a>
-
 * Introduction
-When putting down ideas or solving problems on paper we seldom use a lot of colors,
-so why do we need our editor to look like a christmas tree?
-
-Mindre (which is the Swedish word for "less") tries to strike a good balance between
-usability and minimalism by almost being a monochrome theme but with a splash of color.
-
-I highly recommend using [[http://jonls.dk/redshift/][Redshift]] or something similar to adjust the
-color temperature of your screen. Personally I have mine set to 3200K
-for both day and night (default is 3700K and 5500K respectively).
-
-#+html: <img src="../assets/mindre-screenshot-0_1_3.png"/>
+My version of Mindre with my private modificatons
 
 * Installation
-*** Using =package.el=
-
-You can install =mindre-theme= from [[https://melpa.org][MELPA]] using =package.el=
-
-#+begin_src
-M-x package-refresh-contents
-M-x package-install RET mindre-theme RET
-#+end_src
-
-Or with =use-package=:
-#+begin_src emacs-lisp
-(use-package mindre-theme
-    :ensure t
-    :custom
-    (mindre-use-more-bold nil)
-    (mindre-use-faded-lisp-parens t)
-    :config
-    (load-theme 'mindre t))
-#+end_src
 
 *** Directly from this repo
 
@@ -57,42 +23,3 @@ Or with =use-package=:
         mindre-use-faded-lisp-parens t
         mindre-faded-lisp-parens-modes '(emacs-lisp-mode lisp-mode scheme-mode racket-mode))
 #+end_src
-
-* Release Notes
-*** 0.1.5
-- Tweaks:
-  + Links now use a blue color instead of the default highlight color.
-  + Tags are now highlighted in notmuch instead of authors.
-  + Diff deletions are now better highlighted.
-  + Better looking buttons.
-*** 0.1.4
-- Add support for the following packages:
-  + ediff
-  + speedbar
-- New customizations:
-  + =mindre-use-more-fading=
-    Defaults to =nil=. Note that with this new default, comments are less faded than before.
-  + =mindre-faded-lisp-parens-modes=
-    List of modes for which faded parentheses should be enabled. You still need to
-    set =mindre-use-faded-lisp-parens t= to enable faded parentheses.
-- Tweaks:
-  + Dired look and feel
-  + Terminal colors
-*** 0.1.3
-- Add initial support for =diredfl=
-- Tweak dired faces
-- Byte-compile fix (syohex [[https://github.com/erikbackman/mindre-theme/pull/13][#13]])
-*** 0.1.2
-- Fixed certain faces inheriting default background color when they shouldn't.
-*** 0.1.1
-- Fixed =mindre-use-faded-lisp-parens= not updating properly when set.
-  
-* Roadmap [0/2]
-- [ ] Palette override.
-- [ ] Higher contrast option.
-
-* +Frequently+ asked questions
-- *What fonts are used in the logo/screenshots?*
-
-  Sarasa Mono (It's basically Iosevka) and CMU Concrete
-
