@@ -23,7 +23,7 @@
 
 ;;; Code:
 
-(deftheme mindre
+(deftheme mindre-theme
   "Mindre theme.")
 
 (defgroup mindre nil
