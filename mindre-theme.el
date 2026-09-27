@@ -54,7 +54,7 @@
 	  (yellow-dark   . "#A58A65")
 	  (red           . "#E06C75")
 	  (red-faint     . "#48272A")
-	  (orange        . "#D99A5B"))))
+	  (orange        . "#D99A5B")))
 
 (defmacro mindre-with-color-variables (&rest body)
   (declare (indent 0))
