@@ -32,6 +32,7 @@
 
 (eval-and-compile
   (defconst mindre-theme-colors-alist
+    '(;; Basic
 	  (bg-main       . "#141214")
 	  (fg-main       . "#E8E3EA")
 	  (bg-active     . "#1C191E")
@@ -50,11 +51,10 @@
 	  (green-mint    . "#273A32")
 	  (green-light   . "#79C99F")
 	  (green-faint   . "#527F70")
-
 	  (yellow-dark   . "#A58A65")
 	  (red           . "#E06C75")
 	  (red-faint     . "#48272A")
-	  (orange        . "#D99A5B"))
+	  (orange        . "#D99A5B"))))
 
 (defmacro mindre-with-color-variables (&rest body)
   (declare (indent 0))
